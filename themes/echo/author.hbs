@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{! This is a author page template. It displays posts from a paticular author }}
+
+    {{#foreach posts}}
+
+    <article class="{{post_class}}">
+        <section class="post-excerpt">       
+            {{> post-meta}}
+            
+            {{#if image}}
+            <a href="{{url}}"><img src="{{image}}" alt="{{{title}}}"></a>
+            {{else}}
+            <a href="{{url}}">{{content words="0"}}</a>
+            {{/if}}
+
+            <h1><a href="{{url}}">{{{title}}}</a></h1>
+            <p class="excerpt">{{excerpt}}&hellip;</p>
+        </section>         
+    </article>
+
+    {{/foreach}}
+
+    {{!! Pagination links }}
+    {{pagination}}

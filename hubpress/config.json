@@ -1,1 +1,10 @@
-{"meta":{"username":"fsbdev","repositoryName":"inconstants","branch":"gh-pages"},"site":{"url":"http://fsbdev.github.io/inconstants"},"socialnetwork":{},"theme":{"name":"echo","url":"http://fsbdev.github.io/inconstants/themes/echo"}}
+{
+  "meta": {
+    "username": "fsbdev",
+    "repositoryName": "inconstants",
+    "branch": "gh-pages"
+  },
+  "theme": {
+    "name": "echo"
+  }
+}

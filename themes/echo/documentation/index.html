@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Echo Documentation</title>
+
+</head>
+<body>
+<h1>Echo Documentation</h1>
+
+<p>Thanks for purchasing Echo, a responsive and minimalistic theme for Ghost. It is designed to focus on your content and present it beautifully.</p>
+
+<p>For more premium Ghost themes visit <a href="http://voltthemes.com/">VoltThemes.com</a>.</p>
+
+<h2>Table of Contents</h2>
+
+<ol>
+<li>Getting Started</li>
+<li>Installation</li>
+<li>Upgrading</li>
+<li>Settings</li>
+<li>Customization</li>
+<li>Support</li>
+<li>Version History</li>
+</ol>
+
+
+<h2>1 . Getting Started</h2>
+
+<p>For the purposes of this documentation, it is assumed that you have Ghost up and running. If not, please visit <a href="http://support.ghost.org/">support.ghost.org</a> and follow the guide to install and configure Ghost.</p>
+
+<h2>2. Installation</h2>
+
+<ol>
+<li>Navigate to the folder on your server where Ghost is installed.</li>
+<li>Once there, navigate to the /content/themes/ folder.</li>
+<li>Upload the theme files to this folder.</li>
+<li>Restart Ghost.</li>
+<li>Log into your Ghost Admin.</li>
+<li>Navigate to Settings > General and select Echo in the theme options dropdown menu.</li>
+<li>Click 'Save'.</li>
+</ol>
+
+
+<p><strong>Note:</strong> If you're on using Ghost(Pro), please <a href="http://support.ghost.org/upload-theme-ghostpro/">follow these instructions</a> on how to install a theme.</p>
+
+<h2>3. Upgrading</h2>
+
+<p>If you have made any changes to Echo's template or SCSS/CSS files, you will need to re-integrate your custom theme changes.</p>
+
+<p><strong>Always perform a backup of the theme files before upgrading</strong></p>
+
+<ol>
+<li>Download the latest version of Echo from your <a href="https://creativemarket.com/account/purchases">purchases page</a> on Creative Market.</li>
+<li>Navigate to the folder on your server where Ghost is installed.</li>
+<li>Once there, navigate to the /content/themes/ folder.</li>
+<li>Upload and replace all of the older theme files with the newer ones.</li>
+</ol>
+
+
+<p>Once you update your theme, you will want to restore your changes to the <code>custom.css</code> &amp; <code>theme-options.js</code> files.</p>
+
+<h2>4. Settings</h2>
+
+<p>In Settings > General several options will alter the content in Echo:</p>
+
+<ul>
+<li><strong>Blog Logo</strong> - Appears as the first item the header. We recommend a <strong>maximum size</strong> of 250 × 45 pixels.</li>
+<li><strong>Blog Title</strong>: - The blog title will be displayed if no blog logo has been uploaded.</li>
+<li><strong>Blog Description</strong> - Appears as the first item in the sidebar.</li>
+<li><strong>Blog Cover</strong> - This will appear as a full background image in the underneath the header.</li>
+<li><strong>Posts per page</strong> - This is how many posts are displayed per page.</li>
+</ul>
+
+
+<h2>5. Customization</h2>
+
+<p>If you're comfortable with HTML &amp; CSS, you can make any changes to the theme by editing Echo's template files.</p>
+
+<p><strong>Please be aware that when Echo is updated in the future, you will need to re-integrate your custom theme changes.</strong></p>
+
+<p>The CSS files were created using <a href="http://sass-lang.com/guide">SASS</a>. If you are familiar with SASS, you can easily customize Echo.</p>
+
+<h4>Using CSS</h4>
+
+<p>You can add your own custom CSS to the <code>custom.css</code> stylesheet. This file is located in the assets > css folder.</p>
+
+<h4>Using SASS</h4>
+
+<p>You will find the following SCSS files in /assets/scss/ folder:</p>
+
+<ul>
+<li><strong>screen.scss</strong> - This is the main CSS stylesheet. It imports the mixins.scss and variables.scss files.</li>
+<li><strong>mixins.scss</strong> - This contains all the CSS declarations that Echo reuses throughout the theme.</li>
+<li><strong>variables.scss</strong> - This contains all the variables that you can tweak to customize the way Echo looks.</li>
+</ul>
+
+
+<p><strong>Note</strong>: You will need a SASS preprocessor, such as <a href="http://gruntjs.com/">Grunt</a> to use the SCSS files.</p>
+
+<h4>Navigation</h4>
+
+<p>You can customize the navigation menu by editing the <code>navigation.hbs</code> file located in the partials folder.</p>
+
+<p>This is a great place to put links to your static pages or custom links to your website.</p>
+
+<ol>
+<li>Navigate to the partials folder on your server.</li>
+<li>Open the <code>navigation.hbs</code> file in your favorite text editor.</li>
+<li>Replace the hashtags (#) with your own links.</li>
+<li>Upload the changed <code>navigation.hbs</code> file to the partials folder.</li>
+</ol>
+
+
+<p><strong>Example With Absolute Links:</strong></p>
+
+<pre><code>&lt;li&gt;
+    &lt;a href="http://www.your-website-here.com"&gt;About Me&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href="http://www.your-website-here.com"&gt;Resume&lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+
+<p><strong>Example With Static Page Links:</strong></p>
+
+<pre><code>&lt;li&gt;
+    &lt;a href="about"&gt;About Me&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    &lt;a href="resume"&gt;Resume&lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+
+<h4>Social Media</h4>
+
+<p>Add your own social media links to the header by editing the <code>theme-options.hbs</code> file located in the partials > js folder.</p>
+
+<ol>
+<li>Navigate to the partials > js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite text editor.</li>
+<li>Find the Social Media section</li>
+<li><p>Add your social media links (between the quotation marks) to the corresponding social media variables.</p>
+
+<p> <strong>Facebook Example:</strong></p>
+
+<pre><code> var facebook_link = "http://www.facebook.com/my_facebook_username";
+</code></pre>
+
+<p> <strong>Email Example:</strong></p>
+
+<pre><code> var email_link = "mailto:youremail@gmail.com";
+</code></pre></li>
+<li><p>Upload the changed <code>theme-options.js</code> file to the partials > js folder.</p></li>
+</ol>
+
+
+<p><strong>Note:</strong> If you don't want a specific social media icon to appear, just leave variable blank.</p>
+
+<pre><code>var facebook_link = "";
+</code></pre>
+
+<p><strong>Note:</strong> If you wish to show RSS icon, change the <code>rss_link</code> value to <code>true</code>.</p>
+
+<pre><code>var rss_link = true;
+</code></pre>
+
+<h4>Cover Photo Text</h4>
+
+<p>You can add custom text to appear on top of the cover photo by editing the <code>theme-options.js</code> file located in the partials > js folder.</p>
+
+<p>This is a great place to put your blog's tagline or motto.</p>
+
+<ol>
+<li>Navigate to the partials > js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite <a href="http://www.sublimetext.com/">text editor</a>.</li>
+<li><p>Find the <code>cover_photo_text</code> variable and replace the text (between the quotation marks):</p>
+
+<p> <strong>Example:</strong></p>
+
+<pre><code> var cover_photo_text = "My super awesome Ghost blog";
+</code></pre></li>
+<li><p>Upload the changed <code>theme-options.js</code> file to the partials > js folder.</p></li>
+</ol>
+
+
+<p><strong>Note:</strong> If you don't want the cover photo text to appear, just leave the <code>cover_photo_text</code> variable blank.</p>
+
+<pre><code>var cover_photo_text = "";
+</code></pre>
+
+<h4>Comments</h4>
+
+<p>You can enable Disqus comments on your blog by adding your <a href="https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname">Disqus shortname</a> to the <code>theme-options.js</code> file located in the assets > js folder:</p>
+
+<ol>
+<li><a href="http://disqus.com/register">Add your site</a> to your Disqus account and setup a unique Disqus URL. The unique <strong>shortname</strong> you pick for your Disqus URL will be important to remember!</li>
+<li>Navigate to the assets > js folder on your server.</li>
+<li><p>Open the <code>theme-options.js</code> file and add your unique <a href="https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname">shortname</a> to the <code>disqus</code> variable.</p>
+
+<p> <strong>Example:</strong></p>
+
+<pre><code> var disqus = "DISQUS_SHORTNAME_HERE";
+</code></pre></li>
+<li><p>Save/update the <code>theme-options.js</code> file.</p></li>
+</ol>
+
+
+<p><strong>Note</strong>: If you don't want comments on your blog just leave the <code>disqus</code> variable blank.</p>
+
+<pre><code>var disqus = ""; 
+</code></pre>
+
+<h4>Favicon</h4>
+
+<p>You can add you own custom Favicon to your blog by replacing the favicon.ico file located in the assets folder:</p>
+
+<ol>
+<li>Navigate to the assets folder on your server.</li>
+<li>Replace the favicon.ico file with your own custom icon.</li>
+</ol>
+
+
+<p>There are <a href="http://tools.dynamicdrive.com/favicon/">many</a> <a href="http://www.favicon.cc/">different</a> <a href="http://favicon-generator.org/">web</a> based tools for converting an image into a favicon.ico file.</p>
+
+<h4>Post Cover Images</h4>
+
+<p>You can add a <a href="http://support.ghost.org/post-settings-overview/#post-image">post cover image</a> to your posts by adding one in the post settings. This post cover image will be displayed along with the title of the post on the homepage.</p>
+
+<ol>
+<li>Login to the Ghost Admin</li>
+<li>Create or edit a post.</li>
+<li>Click the post settings icon, this is located next to the publish/update post button.</li>
+<li>Click "Add post image.</li>
+<li>Save/update the post.</li>
+</ol>
+
+
+<h4>Image Lightbox</h4>
+
+<p>By default Echo will <strong>automatically</strong> add an image lightbox to all images within a post. You can disable the automatic image lightbox by editing the <code>theme-options.js</code> file located in the partials > js folder.</p>
+
+<ol>
+<li>Navigate to the partials > js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite text editor.</li>
+<li><p>Find the <code>lightbox</code> variable and change the value from <code>true</code> to <code>false</code>.</p>
+
+<p> <strong>Example:</strong></p>
+
+<pre><code> var lightbox = false;
+</code></pre></li>
+<li><p>Upload the changed <code>theme-options.js</code> file to the partials > js folder.</p></li>
+</ol>
+
+
+<p><strong>Note:</strong> If you wish to enable the automatic image lightbox again just change the <code>false</code> value to <code>true</code>.</p>
+
+<pre><code>var lightbox = true;
+</code></pre>
+
+<h4>Infinite Scroll</h4>
+
+<p>By default infinite scroll will be disabled. You can enable infinite scroll by editing the <code>theme-options.js</code> file located in the partials > js folder.</p>
+
+<ol>
+<li>Navigate to the partials > js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite text editor.</li>
+<li><p>Find the <code>lightbox</code> variable and insert the text (between the quotation marks) <code>scroll</code> or <code>click</code>. Here are the differences between the two options:</p>
+
+<p> <strong>Scroll will load new posts while scrolling:</strong></p>
+
+<pre><code> var infinite_scroll = "scroll";
+</code></pre>
+
+<p> <strong>Click will load new posts with a click of a button:</strong></p>
+
+<pre><code> var infinite_scroll = "click";
+</code></pre></li>
+<li><p>Upload the changed <code>theme-options.js</code> file to the partials > js folder.</p></li>
+</ol>
+
+
+<p><strong>Note:</strong> If you wish to disable infinite scroll just change the leave the <code>infinite_scroll</code> variable blank.</p>
+
+<pre><code>var infinite_scroll = "";       
+</code></pre>
+
+<h2>6. Support</h2>
+
+<p>Support for this theme will be provided on Creative Market via this <a href="https://creativemarket.com/cmyee/24881-Echo">item's comments</a> and <a href="https://creativemarket.com/cmyee">via messages</a> to the author.</p>
+
+<p><strong>Support for my items includes:</strong></p>
+
+<ul>
+<li>Responding to questions or problems regarding the item and its features</li>
+<li>Fixing bugs and reported issues</li>
+<li>Providing updates to ensure compatibility with new software versions</li>
+</ul>
+
+
+<p><strong>Item support does not include:</strong></p>
+
+<ul>
+<li>Customization and installation services</li>
+<li>Support for third party software and plug-ins</li>
+</ul>
+
+
+<h2>7. Version History</h2>
+
+<h4>2015.01.2 - v1.2.2</h4>
+
+<ul>
+<li>Changed the loading order of the JS files.</li>
+<li>Updated footer.</li>
+</ul>
+
+
+<h4>2014.10.3 - v1.2.1</h4>
+
+<ul>
+<li>Added support for post cover images</li>
+<li>Bug fixes</li>
+</ul>
+
+
+<h4>2014.8.30 - v1.2.0</h4>
+
+<ul>
+<li>Added Disqus comments</li>
+<li>Added an image lightbox</li>
+<li>Added infinite scroll</li>
+<li>Added a theme options file</li>
+<li>Added a custom CSS file</li>
+<li>Cleaned up the author &amp; tag pages</li>
+<li>Updated documentation</li>
+<li>Improved performance &amp; speed</li>
+</ul>
+
+
+<h4>2014.8.11 - v1.1.0</h4>
+
+<ul>
+<li>Refactored the CSS</li>
+<li>Added author pages</li>
+<li>Added custom error page</li>
+<li>Added read more link</li>
+<li>Updated post link styles</li>
+<li>Updated tag and static pages</li>
+<li>Updated font icons</li>
+<li>Updated blog logo size</li>
+<li>Updated documentation</li>
+<li>Improved the close button hit area (mobile)</li>
+</ul>
+
+
+<h4>2014.3.29 - v1.0.2</h4>
+
+<ul>
+<li>Added tag pages</li>
+<li>Updated Twitter share link</li>
+<li>Updated pagination</li>
+</ul>
+
+
+<h4>2014.3.1 - v1.0.1</h4>
+
+<ul>
+<li>Optimized font icons and CSS</li>
+<li>Updated FitVids.js</li>
+<li>Updated documentation</li>
+<li>Removed modernizr, replaced with html5shiv</li>
+</ul>
+
+
+<h4>2014.2.16 - v1.0</h4>
+
+<ul>
+<li>Initial Release</li>
+</ul>
+
+</body>
+</html>

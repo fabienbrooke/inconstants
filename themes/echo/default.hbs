@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{! Document Settings }}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        {{! Page Meta }}
+        <title>{{meta_title}}</title>
+        <meta name="description" content="{{meta_description}}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+
+        {{! CSS  }}
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid Sans:400,700">
+        <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+        <link rel="stylesheet" href="{{asset "css/custom.css"}}">
+        
+        {{! Ghost outputs important style and meta data with this tag }}
+        {{ghost_head}}
+
+    </head>
+    <body class="{{body_class}}">
+
+    <header class="site-header" {{#if @blog.cover}}style="margin-bottom: 0px;"{{/if}}>
+        <div class="wrapper">
+            {{#if @blog.logo}}
+                <a href="{{@blog.url}}">
+                    <img class="blog-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                </a>
+            {{else}}
+                <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h2>
+            {{/if}}
+
+            {{! Mobile Menu Button }}
+            <i class="icon-menu menu-btn"></i>            
+            
+            {{! Social Media Icons }}
+            {{> "social-media"}}     
+        </div>      
+    </header>
+
+    {{#if @blog.cover}}
+        {{> "cover-photo"}}  
+    {{/if}}
+
+    <div class="wrapper">        
+        <div class="sidebar">
+
+            <i class="icon-close close-btn"></i>
+
+            <div class="blog-info">
+                   
+                <h4>About {{@blog.title}}</h4>
+                <p>{{@blog.description}}</p>
+                    
+            </div>
+
+            {{> "navigation"}}
+        </div>
+
+        <main class="animated fadeIn" id="main" role="main">
+            {{{body}}}
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <section class="copyright">&copy; {{date format="YYYY"}} <a href="{{@blog.url}}/">{{@blog.title}}</a>. All rights reserved.</section>
+        <section class="poweredby">Theme by <a href="http://www.voltthemes.com/">Volt Themes</a></section>
+    </footer>
+
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ghost_foot}}
+        <script src="{{asset "js/theme-options.js"}}"></script>
+        <script src="{{asset "js/main.min.js"}}"></script>
+
+    </body>
+</html>
